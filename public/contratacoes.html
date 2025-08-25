@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestão de Contratos</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/alfa.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+          <nav class="menu-navegacao">
+            <div class="menu-navegacao__logo">
+                <a href="#"><img src="img/Menu.svg" alt="Menu" height="15px"></a>
+                <a href="menu.html"><img src="img/logo.png" width="80px" height="25px"></a>
+                                
+            </div>
+            <a href="clientes.html" class="submenu">Clientes</a> |
+            <a href="cartoes.html" class="submenu">Cartões</a> |
+            <a href="contratacoes.html" class="submenu">Contratos</a>
+
+            <input type="text" name="name-server-id" id="name-server-id" class="pesquisar"
+                placeholder=" 🔍︎ Localizar na página">
+            <button class="menu__botao" id="btn-pesquisar">Localizar</button>
+            <button id="btn-mostrar-form" class="menu__botao">Novo Contrato</button>    
+          </nav>
+  </header>
+  
+   <!-- Popup para CPF -->
+  <div class="popup-wrapper" id="cpf-popup">
+    <div class="popup-form">
+      <span class="close-btn" id="btn-fechar-popup">×</span>
+      <form id="cpf-form">
+        <input type="text" name="cpf" placeholder="Digite o CPF do cliente" required>
+        <button type="submit" class="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dados do cliente -->
+  <div class="container" id="cliente-info" style="display:none;">
+    <h3>Dados do Cliente</h3>
+    <p><strong>Nome:</strong> <span id="cliente-nome"></span></p>
+    <p><strong>CPF:</strong> <span id="cliente-cpf"></span></p>
+    <div id="alert" class="alert"></div> <!-- Alerta -->
+  </div>
+
+  <!-- Lista de contratos -->
+  <div class="container" id="lista-container" style="display:none;">
+    <h3>Cartões Contratados</h3>
+    <div id="contratos-lista"></div>
+  </div>
+
+  <!-- Formulário para novo contrato -->
+  <div class="popup-wrapper" id="form-popup" style="display:none;">
+    <div class="popup-form">
+      <span class="close-btn" id="btn-fechar-form">×</span>
+      <form id="contrato-form">
+        <select name="CartaoId" required></select>
+        <input type="date" name="dataContratacao" required>
+        <select name="status" required>
+          <option value="Ativo">Ativo</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+        <button type="submit" class="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="js/contratacoes.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ module.exports = {
     description: 'Documentação da API para gerenciamento de clientes, cartões e contratações.'
   },
   paths: {
-    '/clientes': {
+    '/api/clientes': {
       post: {
         summary: 'Cadastrar cliente',
         requestBody: {
@@ -31,7 +31,7 @@ module.exports = {
         }
       }
     },
-    '/clientes/{id}': {
+    '/api/clientes/{id}': {
       get: {
         summary: 'Buscar cliente por ID',
         parameters: [{
@@ -78,7 +78,7 @@ module.exports = {
         }
       }
     },
-    '/cartoes': {
+    '/api/cartoes': {
       post: {
         summary: 'Cadastrar cartão',
         requestBody: {
@@ -100,7 +100,7 @@ module.exports = {
         }
       }
     },
-    '/cartoes/{id}': {
+    '/api/cartoes/{id}': {
       get: {
         summary: 'Buscar cartão por ID',
         parameters: [{
@@ -147,7 +147,7 @@ module.exports = {
         }
       }
     },
-    '/contratacoes': {
+    '/api/contratacoes': {
       post: {
         summary: 'Cadastrar contratação',
         requestBody: {
@@ -163,7 +163,7 @@ module.exports = {
         }
       }
     },
-    '/clientes/{ClienteId}/contratacoes': {
+    '/api/clientes/{ClienteId}/contratacoes': {
       get: {
         summary: 'Listar contratações por cliente',
         parameters: [{
@@ -177,7 +177,7 @@ module.exports = {
         }
       }
     },
-    '/contratacoes/{id}': {
+    '/api/contratacoes/{id}': {
       put: {
         summary: 'Atualizar status da contratação',
         parameters: [{
@@ -240,4 +240,5 @@ module.exports = {
     }
   }
 };
+
 
